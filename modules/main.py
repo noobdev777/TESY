@@ -51,7 +51,7 @@ async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('Hi\n\nTO download a test file send here » ')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
-    await bot.send_document(-1002139865043, x)
+    #await bot.send_document(-1002139865043, x)
     await input.delete(True)
     file_name, ext = os.path.splitext(os.path.basename(x))
 
